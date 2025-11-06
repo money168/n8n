@@ -1,6 +1,6 @@
-#n8n install local with docker compose
+# n8n install local with docker compose
 
-##n8n uses SQLite to save credentials, past executions, and workflows.
+## n8n uses SQLite to save credentials, past executions, and workflows.
 
 cat /etc/os-release  
 sudo docker version  
