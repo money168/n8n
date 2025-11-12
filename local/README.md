@@ -16,3 +16,6 @@ ls -l n8n_data/
 
 docker compose pull n8n  
 docker compose up -d --no-deps n8n  
+
+## 注意事項
+1.個人用於LAB.停用TLS/Https (N8N_SECURE_COOKIE=false)
