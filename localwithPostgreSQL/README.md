@@ -23,5 +23,7 @@ ls -l n8n_data/
 docker compose pull n8n
 docker compose up -d --no-deps n8n
 
-#### 20251112 
+#### 注意事項
+1.個人用於LAB.停用TLS/Https (N8N_SECURE_COOKIE=false)  
+2.安裝n8n version 1.118.1會有問題，使用 1.116.2  
 
