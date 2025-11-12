@@ -26,5 +26,5 @@ docker compose up -d --no-deps n8n
 ## 注意事項
 20251112  
 1.個人用於LAB.停用TLS/Https (N8N_SECURE_COOKIE=false)  
-2.安裝n8n version 1.118.1 使用有問題，使用 1.116.2  
+2.個人安裝n8n version 1.118.1 使用有問題，使用 1.116.2  
 
