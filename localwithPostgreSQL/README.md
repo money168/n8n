@@ -1,5 +1,5 @@
 # n8n install local with docker compose ( PostgreSQL)
-## n8n uses PostgreSQL database to save credentials, past executions, and workflows.
+n8n uses PostgreSQL database to save credentials, past executions, and workflows.  
 
 ### .env
 The default database name, user and password for PostgreSQL can be changed in the .env file. 
