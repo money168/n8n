@@ -12,8 +12,26 @@ services:
       - N8N_RUNNERS_ENABLED=true
       - N8N_BLOCK_ENV_ACCESS_IN_NODE=true
       - N8N_GIT_NODE_DISABLE_BARE_REPOS=true      
-      - N8N_SECURE_COOKIE=false
       # Disable TLS/HTTPS for lab
+      - N8N_SECURE_COOKIE=false
+      
+      # Reduce saved data
+      # Save executions ending in errors
+      - EXECUTIONS_DATA_SAVE_ON_ERROR=all
+      # Don't save successful executions
+      - EXECUTIONS_DATA_SAVE_ON_SUCCESS=none
+      # Don't save node progress for each execution
+      - EXECUTIONS_DATA_SAVE_ON_PROGRESS=true
+      # Don't save manually launched executions
+      - EXECUTIONS_DATA_SAVE_MANUAL_EXECUTIONS=false
+      
+      # Enable executions pruning，clear executions_data
+      - EXECUTIONS_DATA_PRUNE=true
+      - EXECUTIONS_DATA_MAX_AGE=96
+      - EXECUTIONS_DATA_PRUNE_MAX_COUNT=5000
+      # Clear SQLITE database
+      - DB_SQLITE_VACUUM_ON_STARTUP=true
+      
     volumes:
       - ./n8n_data:/home/node/.n8n
       # Persistent storage for workflows and data
